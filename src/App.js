@@ -1,15 +1,14 @@
+import { useState, useEffect, useRef } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Palette from './Palette';
-import seedColors from './seedColors';
-import { Routes, Route } from 'react-router-dom';
 import PaletteList from './PaletteList';
 import SingleColorPalette from './SingleColorPalette';
 import NewPaletteForm from './NewPaletteForm';
-import { useState, useEffect, useRef } from 'react';
+import seedColors from './seedColors';
 import {
   CSSTransition,
   TransitionGroup,
 } from 'react-transition-group';
-import { useLocation } from 'react-router-dom';
 import Page from './Page';
 
 const App = () => {

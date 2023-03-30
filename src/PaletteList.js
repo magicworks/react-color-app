@@ -18,7 +18,7 @@ import {
 } from 'react-transition-group';
 import styles from './styles/PaletteListStyles';
 
-export default function PaletteList(props) {
+const PaletteList = (props) => {
   const { palettes, deletePalette } = props;
   const [openDeleteDialog, setOpenDeleteDialog] = useState(false);
   const [deletingId, setDeletingId] = useState('');
@@ -33,6 +33,7 @@ export default function PaletteList(props) {
     setOpenDeleteDialog(true);
     setDeletingId(id);
   };
+
   const closeDialog = () => {
     setOpenDeleteDialog(false);
     setDeletingId('');
@@ -114,4 +115,6 @@ export default function PaletteList(props) {
       </Dialog>
     </Box>
   );
-}
+};
+
+export default PaletteList;
